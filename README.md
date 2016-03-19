@@ -1,7 +1,6 @@
 # jsGlossary
-A pure JavaScript based plugin for an in-line glossary
 
-This is a custom JSON based JavaScript plugin that can be used to build an in-line glossary on page level content anchors. It has one public method to initialize the plugin and takes an optional arguments object consisting of six parameters:
+This is a pure JavaScript plugin that builds an in-line glossary on page level content anchors. It has one public method to initialize the plugin and takes an optional arguments object consisting of six parameters:
 
 dataSource
     The source of the glossary data file
