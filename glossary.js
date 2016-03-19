@@ -45,7 +45,7 @@ var Glossary = (function() {
 			    	return defaults;
 			}
 						
-			//create the XHR rqeuest to load the JSON data
+			//create the XHR request to load the JSON data
 			var request = new XMLHttpRequest();
 			//use a GET request and the file path passed into the init()
 		        request.open("GET", base.options.dataSource);
