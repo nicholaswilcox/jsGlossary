@@ -27,3 +27,14 @@ closeTitleMessage
     Sets the 'title' hover tooltip on the definition close button
     
 The plugin works by reading the 'data-term' attribute on the link to perform a lookup of the definition in a data file. If there is a match the defintion will be loaded into a temporary display <span> tag that is added in-line with the content link. When the close <a> link/button (that is also rendered in-line) is clicked, the <span> tag and the close <a> link/button are removed from the DOM. The link is then reset to to its initial state.
+
+
+Additional Resources
+--------------------
++/- iconography inspired by this article: 
+https://www.behance.net/gallery/4962215/Wenotes-iconography
+
+Modified and used a function for extending an object's properties: 
+http://stackoverflow.com/questions/11197247/javascript-equivalent-of-jquerys-extend-method
+
+Helpful article from Ken Wheeler (@ken_wheeler) that helped me write an 'if statement' with additional validation for arguments
