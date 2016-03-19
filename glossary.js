@@ -1,3 +1,10 @@
+/*!
+ * jsGlossary Plugin v1.0.0
+ * https://github.com/nicholaswilcox/jsGlossary
+ *
+ * Copyright 2016 Nicholas Wilcox
+ * Released under the MIT license
+ */
 var Glossary = (function() {	
 	
 	//set the plugin default values
