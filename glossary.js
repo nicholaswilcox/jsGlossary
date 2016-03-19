@@ -103,8 +103,7 @@ var Glossary = (function() {
 						                closeButton.title = base.options.closeTitleMessage;
 						                closeButton.innerHTML = "&nbsp;";
 						                //append it to the glossary link
-						                //this.appendChild(closeButton);								
-								this.parentNode.insertBefore(closeButton, this.nextSibling);
+						                this.parentNode.insertBefore(closeButton, this.nextSibling);
 								
 								//initialize the close click event now the close button has been added to the DOM 
 								initCloseButton(this.nextSibling);
@@ -121,8 +120,6 @@ var Glossary = (function() {
 						 	e.preventDefault();		 	
 						 	
 						 	//remove the defintion span tag
-		            				//this.previousSibling.querySelector("span").remove();
-		            				//to get around remove() issue above with the IE browser I'm using this approach instead below
 		            				this.previousSibling.removeChild(this.previousSibling.querySelector("span"));
 		            				
 		            				//clean up using the new trim method
@@ -135,8 +132,6 @@ var Glossary = (function() {
 						 	this.previousSibling.className = this.previousSibling.className.replace(" opened","");				 	
 						 	
 						 	//remove the close button from the DOM
-						 	//this.remove();
-						 	//to get around remove() issue above with the IE browser I'm using this approach instead below
 						 	this.parentNode.removeChild(this);
 						}
 					}		                			                	
