@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <title>In-line Glossary Plugin</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="glossary.css">
+  <script src="../glossary.min.js"></script>
+  <script>
+  	window.onload = function() {
+  		//initialize the glossary plugin
+  		//optional parameters can be passed to override the defaults object
+  		Glossary.init();
+    	};
+  </script>
+</head>
+<body>
+	<div id="siteContainer">
+		<h1>In-line Glossary Plugin</h1>
+		<p>This is a pure JavaScript plugin that builds an in-line glossary on page level content anchors.  It has one public method to initialize the plugin and takes an optional arguments object consisting of <i>six</i> parameters:</p>
+		<dl>
+			<dt>dataSource</dt>
+			<dd>The source of the glossary data file</dd>
+			<dt>linkSelector</dt>
+			<dd>The DOM selector(s) for assigning the click events to activate the glossary plugin</dd>
+			<dt>dataLoadErrorMessage</dt>
+			<dd>Error message for when the glossary data file doesn't load</dd>
+			<dt>definitionLookupErrorMessage</dt>
+			<dd>Error message for when the term/defintion is not found in the glossary data file</dd>
+			<dt>hoverTitleMessage</dt>
+			<dd>Sets the 'title' hover tooltip to show on the link</dd>
+			<dt>closeTitleMessage</dt>
+			<dd>Sets the 'title' hover tooltip on the definition close button</dd>
+		</dl>
+		<p>The plugin works by reading the 'data-term' attribute on the link to perform a lookup of the definition in a data file.  If there is a match the defintion will be loaded into a temporary display &lt;span&gt; tag that is added in-line with the content link.  When the close &lt;a&gt; link/button (that is also rendered in-line) is clicked, the &lt;span&gt; tag and the close &lt;a&gt; link/button are removed from the DOM.  The link is then rest to to its initial state.</p>
+		<h2>Example Usages</h2>
+		<ul>
+			<li>Here is a <a class="glossaryTerm" href="#" data-term="term1">term</a>that has been setup properly.</li>
+			<li>Here is another <a class="glossaryTerm" href="#" data-term="term2">term</a>that has been setup properly.</li>
+			<li>Here is a <a class="glossaryTerm" href="#">term</a>that is missing its 'data-term' attribute so it will expand and show an error.</li>
+			<li>Here is a <a href="#" data-term="term2">term</a> that does not have the 'class' attribute so the glossary link is not activated.</li>
+			<li>Here is a <a href="#">term</a> without either the 'class' or 'data-term' attributes.  The glossary link will not activate.</li>
+		</ul>
+	</div>
+</body>
+</html>
